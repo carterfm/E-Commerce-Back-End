@@ -26,37 +26,37 @@ This backend features the following routes:
 
 * GET /api/categories: returns all categories along with their associated products.
 
-* GET /api/categories/:id: returns a single category with the specified id along with its associated products.
+* GET /api/categories/:id : returns a single category with the specified id along with its associated products.
 
 * POST /api/categories: creates a new category
 
-* PUT /api/categories/:id: edits the name of the category with the specified id
+* PUT /api/categories/:id : edits the name of the category with the specified id
 
-* DELETE /api/categories/:id: deletes a single category with the specified id. 
+* DELETE /api/categories/:id : deletes a single category with the specified id. 
 
 #### Products:
 
 * GET /api/products: returns all products along with their associated categories and tags
 
-* GET /api/products/:id: returns a single product with the specified id along with its associated category and tags.
+* GET /api/products/:id : returns a single product with the specified id along with its associated category and tags.
 
 * POST /api/products: creates a new product and sets up many-to-many associations with specified tags
 
-* PUT /api/products/:id: edits the product with the specified id, including its many-to-many associations with tags
+* PUT /api/products/:id : edits the product with the specified id, including its many-to-many associations with tags
 
-* DELETE /api/products/:id: deletes the product with the specified id
+* DELETE /api/products/:id : deletes the product with the specified id
 
 #### Tags:
 
 * GET /api/tags: return all tags along with their associated products
 
-* GET /api/tags/:id: returns a single tag with the specified id along with its associated products
+* GET /api/tags/:id : returns a single tag with the specified id along with its associated products
 
 * POST /api/tags: creates a new tag and sets up many-to-many associations with specified products
 
-* PUT /api/tags/:id: edits the tag with the specified id, including its many-to-many associations with products
+* PUT /api/tags/:id : edits the tag with the specified id, including its many-to-many associations with products
 
-* DELETE /api/tags/:id: deletes the product with the specified id
+* DELETE /api/tags/:id : deletes the product with the specified id
 
 
 ## Questions <a id="questions"></a>
