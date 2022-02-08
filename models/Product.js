@@ -10,6 +10,30 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }, 
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      //verifying that we are, in fact, dealing with a decimal
+      validate: {
+        isDecimal: true
+      }
+      
+    }, 
+    stock: {
+      type: DataTypes.INTEGER, 
+      allowNull: false,
+      defaultValue: 10,
+      //verifying that we're using a number
+      validate: {
+        isNumeric: true
+      }
+      
+    }
+    //My code in index.js is auto-generating a CategoryId field here
   },
   {
     sequelize,
