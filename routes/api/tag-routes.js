@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
   // create a new tag
     /* req.body should look like this...
     {
-      product_name: "yellow",
+      tag_name: "yellow",
       productIds: [1, 2, 3, 4]
     }
   */
@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
       })
       .then(tagProductIds => res.status(200).json(tagProductIds))
       .catch((err) => {
-        console.log(err);
+        console.log("----\n" + err + "\n----");
         res.status(500).json(err);
       });
 });
@@ -101,12 +101,12 @@ router.put('/:id', (req, res) => {
     })
     .then(updatedProductTags => res.json(updatedProductTags))
     .catch((err) => {
-      // console.log(err);
+      console.log("----\n" + err + "\n----");
       res.status(400).json(err);
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
     const deletedTag = await Tag.destroy({
